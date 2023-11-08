@@ -10,5 +10,4 @@ public class Spectator : IPlayer
         Id = id;
         Name = name;
     }
-
 }

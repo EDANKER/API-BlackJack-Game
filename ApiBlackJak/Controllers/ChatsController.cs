@@ -1,6 +1,11 @@
-﻿namespace ApiBlackJak.Controllers;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class ChatsController
+namespace ApiBlackJak.Controllers;
+
+
+[ApiController]
+[Route("/api/[controller]")]
+public class ChatsController : ControllerBase
 {
     
 }

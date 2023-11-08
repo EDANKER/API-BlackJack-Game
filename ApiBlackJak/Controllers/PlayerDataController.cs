@@ -3,7 +3,8 @@
 namespace ApiBlackJak.Controllers;
 
 [ApiController]
-public class SessionPlayerController : ControllerBase
+[Route("/api/[controller]")]
+public class PlayerDataController : ControllerBase
 {
     
 }
