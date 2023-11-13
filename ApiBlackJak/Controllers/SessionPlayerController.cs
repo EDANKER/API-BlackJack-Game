@@ -2,8 +2,10 @@
 
 namespace ApiBlackJak.Controllers;
 
-[ApiController]
 public class SessionPlayerController : ControllerBase
 {
-    
+    public async Task Get()
+    {
+        
+    }
 }

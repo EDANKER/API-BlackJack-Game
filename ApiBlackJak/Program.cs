@@ -9,6 +9,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+var webSocketOptions = new WebSocketOptions()
+{
+    KeepAliveInterval = TimeSpan.FromMinutes(2)
+};
+
+app.UseWebSockets(webSocketOptions);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -17,14 +24,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-
-var webSocketOptions = new WebSocketOptions()
-{
-    KeepAliveInterval = TimeSpan.FromMinutes(2)
-};
-
-app.UseWebSockets(webSocketOptions);
 
 app.UseAuthorization();
 
